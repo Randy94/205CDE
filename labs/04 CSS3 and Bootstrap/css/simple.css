@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, Verdana, sans-serif;
+    color: #528CE0;
+    background: #550000;
+}
+
+h1, h2 {
+    color: rgba(65,105,225,0.7);
+    font-weight: bold;
+}
+article{
+    color: #1b1d26;
+    font-weight: bolder;
+}
+h1 {
+    font-size: 3.0em;
+}
+
+ul, ol {
+    font-size: 0.5em;
+}
+li{
+    border: 2x black;
+    color: darkgrey;
+    font-size: large;
+    text-indent: each-line;
+}
+ul{
+    border: #1b1d26;
+}
+p{
+    text-indent: each-line;
+    color: #1b1d26;
+    font-weight: bolder;
+}
+figcaption{
+    font-size: small;
+    font-weight: bolder;
+}
+p.copyright_notice {
+    font-size: 0.8em;
+    font-weight: bolder;
+}
+#special {
+    font-size: 0.8em;
+    color: yellowgreen;
+    font-style: italic;
+    border-left: 2px solid black;
+    margin-left: 40px;
+    padding-left: 10px;
+}
+/*p::first-letter {
+    font-size:8em;
+}
+
+p::first-line {
+    font-weight: bold;
+}
+*/

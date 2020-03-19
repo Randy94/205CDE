@@ -4,6 +4,7 @@ body {
 
 p {
     color: blue;
+
 }
 
 h1.alert {
@@ -12,6 +13,7 @@ h1.alert {
 
 .alert {
     color: red;
+
 }
 
 p#unique {

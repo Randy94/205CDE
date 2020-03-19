@@ -1,0 +1,68 @@
+h1{
+    font-size: 100px;
+    text-align: center;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    border:1px solid #0b77b7;
+}
+figcaption{
+    padding-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+h2.one{
+    width: 300px;
+    height: 100px;
+    background: #2B81AF;
+    padding: 10px;
+    margin-left: 800px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: lighter;
+    border-top: 1px solid #366097;
+}
+p.onetext{
+    text-align: center;
+    margin-top: -100px;
+    font-size: 20px;
+}
+h3.two{
+    width: 300px;
+    height: 100px;
+    background: burlywood ;
+    padding: 10px;
+    margin-left: 800px;
+    margin-top: 35px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: lighter;
+}
+p.twotext{
+    text-align: center;
+    margin-top: -110px;
+    font-size: 20px;
+}
+
+h4.three{
+    width: 300px;
+    height: 100px;
+    background: #EE5757;
+    padding: 10px;
+    margin-left: 800px;
+    margin-top: 35px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: lighter;
+}
+p.threetext{
+    text-align: center;
+    margin-top: -125px;
+    font-size: 20px;
+
+}

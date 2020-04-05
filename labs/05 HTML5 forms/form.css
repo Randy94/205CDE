@@ -1,0 +1,10 @@
+input[type="text"] {
+    color : blue;
+    font-weight: bolder;
+}
+input[type="submit"] {
+    font-weight : bold;
+}
+fieldset{
+    font-weight: bolder;
+}

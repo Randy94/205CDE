@@ -37,10 +37,33 @@ function addTask() {
     return false;
     
 } // End of addTask() function.
+    function removeDuplicates() {
+    var addedTasklistElement = document.querySelector("ol")
+    console.log(addedTasklistElement);
+
+    addedTasklistElement.innerHTML = "";
+
+    var removeDuplicates = remove_duplicates(tasks);
+    console.log(removeDuplicates);
+
+    var i;
+    for(i = 0; i<removeDuplicates.length; i++){
+        var emptylist = document.createElement("li");
+        var emptyTextNode = document.createTextNode(removeDuplicates[i]);
+        emptylist.appendChild(emptyTextNode);
+
+        addedTasklistElement.appendChild(emptylist);
+    }
+}
+    function remove_duplicates(arr) {
+    let unique_array = Array.from(new Set(arr));
+    return unique_array;
+}
 
 // Initial setup:
 function init() {
     'use strict';
     document.getElementById('theForm').onsubmit = addTask;
+    document.getElementById('theform').onsubmit = removeDuplicates;
 } // End of init() function.
 window.onload = init;

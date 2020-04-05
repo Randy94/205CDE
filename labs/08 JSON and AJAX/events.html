@@ -28,10 +28,38 @@ function handleClick(e) {
 	}
 	alert("You clicked on " + target.id);
 }
+function handlemouseover(e) {
+  var evt = e || window.event;
+  var target;
+  if (evt.target) {
+    target = evt.target;
+  } else {
+    target = evt.srcElement;
+  }
+  alert("You hovered " + target.id);
+}
+
+
+window.onload = function () {
+
+var div = document.getElementById("mouse");
+if(div.addEventListener){
+  div.addEventListener("mouseover",handlemouseover,false)
+}else if (div.attachEvent){
+  div.addEventListener("mouseover",handlemouseover)
+}
+
+
+}
+
+
 
   </script>
 </head>
 <body>
+<div id="mouse">
+  <p>gfdgfdsgdfsgdfsgdsfgfdsgdsfgfdsgdsgfdsgdsgfdsg</p>
+</div>
 <span id="clickme">Click me!</span>
 </body>
 </html>

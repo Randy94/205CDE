@@ -31,8 +31,70 @@ function Coffee(roast, ounces) {
 		}
 		return msg;
 	};
+	this.sip = function () {
+    console.log("Hmmm, tasty!");
+    };
 }
+function Tea(type, ounces) {
+    this.type = type;
+    this.ounces = ounces;
+    this.getSize = function () {
+        if (this.ounces === 8) {
+            return "small";
+        } else if (this.ounces === 12) {
+            return "medium";
+        } else if (this.ounces === 16) {
+            return "large";
+        }
+    };
+    this.getSteepTime = function () {
+        switch (this.type) {
+            case "white":
+                return [2, 80];
+                break;
 
+            case "green":
+                return [3, 80];
+                break;
+
+            case "black":
+                return [4, 95];
+                break;
+
+            case "darjeeling":
+                return [3, 80];
+                break;
+
+            case "oolong":
+                return [4, 90];
+                break;
+
+            default:
+                return [3, 80];
+                break;
+
+        }
+
+    };
+    this.order = function () {
+        var msg;
+        switch (this.getSize()) {
+            case "small":
+            case "medium":
+            case "large":
+                return "You have ordered a " + this.getSize() + " " + this.type + " tea." + " Please allow the tea to steep for " + this.getSteepTime()[0] + " minutes in " + this.getSteepTime()[1] + "C water.";
+                break;
+
+            default:
+                msg = "We dont have " + this.type + " tea in that size!";
+                break;
+        }
+        return msg;
+    };
+    this.sip = function () {
+        console.log("Hmmm, tasty!");
+    };
+}
 var coffee = new Coffee("House Blend", 12);
 console.log(coffee.order());
 
@@ -42,6 +104,17 @@ console.log(darkRoast.order());
 var specialBlend = new Coffee("Special Blend", 200);
 console.log(specialBlend.order());
 
+var green = new Tea("green", 8);
+console.log(green.order());
+
+var black = new Tea("black", 16);
+console.log(black.order());
+
+var oolong = new Tea("oolong", 200);
+console.log(oolong.order());
+
+coffee.sip();
+green.sip();
 </script>
 </head>
 <body>

@@ -41,12 +41,51 @@ window.onload = function() {
 		div.innerHTML = message + count + " times!";
 	};
 };
+ 	window.onload = function () {
+	var playback_speed = 1.0;
+
+	function updateSpeed() {
+		document.querySelector('#play-speed').innerText = playback_speed.toFixed(1);
+		}
+
+
+		updateSpeed();
+		document.querySelector('#negatiivi').onclick = function () {
+		if (playback_speed >= 0.2){
+			playback_speed -= 0.2;
+			}
+			updateSpeed();
+		};
+
+		document.querySelector('#positiivinen').onclick = function () {
+		if(playback_speed <= 1.8){
+			playback_speed += 0.2;
+			}
+			updateSpeed();
+		};
+
+		document.querySelector('#normaali').onclick = function () {
+		playback_speed = 1.0;
+		updateSpeed();
+		};
+
+
+
+	}
 
 </script> 
 </head> 
 <body>
 	<button id="clickme">Click me!</button>
-	<div id="message"></div>
+	<table>
+		<tr>
+			<td><button id="negatiivi">-</button></td>
+			<td><button id="normaali">0</button></td>
+			<td><button id="positiivinen">+</button></td>
+		</tr>
+	</table>
+	<div id="play-speed"></div>
+
 </body>
 </html>
 
